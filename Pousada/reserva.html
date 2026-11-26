@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraíso Pousada | Reservas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="imagens/favicon-paraiso-pousada.png">
+    <script src="./js/scriptReserva.js"></script>
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <h2>Paraíso <span>Pousada</span></h2>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="acomodacoes.html">Acomodações</a>
+            <a href="login.html">Login</a>
+            <a href="reserva.html" class="botao-menu ativo">Reservar</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="titulo-pagina">
+            <h1>Faça sua Reserva</h1>
+            <p>Preencha os dados abaixo e solicite sua hospedagem.</p>
+        </section>
+
+        <section id="reserva" class="secao">
+
+            <div class="reserva-container">
+
+                <div class="reserva-info">
+
+                    <h2>Prepare sua viagem!</h2>
+
+                    <p>
+                        Escolha sua acomodação, informe o período da
+                        hospedagem e preencha seus dados.
+                    </p>
+
+                    <img src="imagens/praia.jpg" alt="Praia da pousada">
+
+                    <h3>Informações importantes</h3>
+
+                    <ul>
+                        <li>Check-in a partir das 14h.</li>
+                        <li>Check-out até as 12h.</li>
+                        <li>Wi-Fi disponível nas acomodações.</li>
+                        <li>Confirmação sujeita à disponibilidade.</li>
+                    </ul>
+
+                </div>
+
+                <div class="reserva-form">
+
+                    <h2>Dados da Reserva</h2>
+
+                    <form id="formReserva">
+
+                        <h3>Informações pessoais</h3>
+
+                        <label for="txNome">Nome completo</label>
+                        <input type="text" id="txNome" name="nome"
+                            placeholder="Digite seu nome" required>
+
+                        <label for="txEmail">E-mail</label>
+                        <input type="email" id="txEmail" name="email"
+                            placeholder="Digite seu e-mail" required>
+
+                        <label for="txTelefone">Telefone</label>
+                        <input type="tel" id="txTelefone" name="telefone"
+                            placeholder="(00) 00000-0000" required>
+
+                        <h3>Informações da hospedagem</h3>
+
+                        <label for="quarto">Escolha sua acomodação</label>
+
+                        <select id="quarto" name="quarto" required>
+                            <option value="">Selecione um quarto</option>
+                            <option value="Suíte Casal">Suíte Casal</option>
+                            <option value="Suíte Família">Suíte Família</option>
+                            <option value="Chalé Premium">Chalé Premium</option>
+                        </select>
+
+                        <div class="form-linha">
+
+                            <div>
+                                <label for="txEntrada">Data de entrada</label>
+                                <input type="date" id="txEntrada" required>
+                            </div>
+
+                            <div>
+                                <label for="txSaida">Data de saída</label>
+                                <input type="date" id="txSaida" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-linha">
+
+                            <div>
+                                <label for="txAdultos">Adultos</label>
+                                <input type="number" id="txAdultos"
+                                    min="1" value="1" required>
+                            </div>
+
+                            <div>
+                                <label for="txCriancas">Crianças</label>
+                                <input type="number" id="txCriancas"
+                                    min="0" value="0">
+                            </div>
+
+                        </div>
+
+                        <label for="txObservacoes">Observações</label>
+
+                        <textarea id="txObservacoes" rows="4"
+                            placeholder="Alguma solicitação especial?"></textarea>
+
+                        <h3>Forma de pagamento</h3>
+
+                        <label for="pagamento">Escolha uma opção</label>
+
+                        <select id="pagamento" required>
+                            <option value="">Selecione o pagamento</option>
+                            <option value="PIX">PIX</option>
+                            <option value="Cartão de crédito">Cartão de crédito</option>
+                            <option value="Dinheiro na hospedagem">Dinheiro na hospedagem</option>
+                        </select>
+
+                        <label class="termos">
+                            <input type="checkbox" id="txTermos" required>
+                            Concordo com as condições da reserva.
+                        </label>
+
+                        <button type="button" class="botao-form"
+                            onclick="visualizarDados()">
+                            Visualizar Reserva
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+        <section id="resultado" class="secao fundo">
+
+            <div class="titulo">
+                <h2>Resumo da sua Reserva</h2>
+                <p>Confira os dados informados antes de continuar.</p>
+            </div>
+
+            <div class="formulario">
+
+                <p id="pNome">Nome:</p>
+                <p id="pEmail">E-mail:</p>
+                <p id="pTelefone">Telefone:</p>
+                <p id="pQuarto">Acomodação:</p>
+                <p id="pEntrada">Data de entrada:</p>
+                <p id="pSaida">Data de saída:</p>
+                <p id="pAdultos">Adultos:</p>
+                <p id="pCriancas">Crianças:</p>
+                <p id="pObservacoes">Observações:</p>
+                <p id="pPagamento">Pagamento:</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <h2>Paraíso Pousada</h2>
+        <p>Seu lugar de descanso perto do mar.</p>
+        <p>Contato: contato@paraisopousada.com.br</p>
+        <p>© 2026 Paraíso Pousada - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

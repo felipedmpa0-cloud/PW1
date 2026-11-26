@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraíso Pousada | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="imagens/favicon-paraiso-pousada.png">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <h2>Paraíso <span>Pousada</span></h2>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="acomodacoes.html">Acomodações</a>
+            <a href="login.html" class="ativo">Login</a>
+            <a href="reserva.html" class="botao-menu">Reservar</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="formulario-pagina">
+
+            <div class="formulario">
+
+                <h1>Bem-vindo de volta!</h1>
+                <p>Entre na sua conta para continuar.</p>
+
+                <form id="formLogin">
+
+                    <label for="txEmail">E-mail</label>
+
+                    <input type="email" id="txEmail"
+                        placeholder="Digite seu e-mail" required>
+
+                    <label for="txSenha">Senha</label>
+
+                    <input type="password" id="txSenha"
+                        placeholder="Digite sua senha" required>
+
+                    <div class="form-opcoes">
+
+                        <label>
+                            <input type="checkbox" id="txLembrar">
+                            Lembrar de mim
+                        </label>
+
+                        <a href="#">Esqueci minha senha</a>
+
+                    </div>
+
+                    <button type="button" class="botao-form"
+                        onclick="visualizarDados()">
+                        Visualizar Dados
+                    </button>
+
+                </form>
+
+                <p class="form-final">
+                    Ainda não tem uma conta?
+                    <a href="#">Cadastre-se</a>
+                </p>
+
+                <a href="index.html" class="voltar">
+                    Voltar para o início
+                </a>
+
+            </div>
+
+        </section>
+
+        <section id="resultado" class="secao fundo">
+
+            <div class="titulo">
+                <h2>Dados do Login</h2>
+                <p>Confira as informações preenchidas.</p>
+            </div>
+
+            <div class="formulario">
+
+                <p id="pEmail">E-mail:</p>
+
+                <p id="pSenha">Senha:</p>
+
+                <p id="pLembrar">Lembrar de mim:</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <h2>Paraíso Pousada</h2>
+
+        <p>Seu lugar de descanso perto do mar.</p>
+
+        <p>Contato: contato@paraisopousada.com.br</p>
+
+        <p>© 2026 Paraíso Pousada - Todos os direitos reservados.</p>
+
+    </footer>
+
+</body>
+
+</html>
